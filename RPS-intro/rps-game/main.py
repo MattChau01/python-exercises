@@ -1,18 +1,29 @@
+# importing functions from python library
+import random
+
+
 def get_choices():
 
-  player_choice = 'rock'
-  computer_choice = 'paper'
+  player_choice = input("Enter a choice (rock, paper, scissors): ")
 
-  # a dictionary of choices is being made, using the local variables decalared above
-  choices = {'player': player_choice, 'computer': computer_choice}
+  options = ['rock', 'paper', 'scissors']
 
-  return player_choice + ' and ' + computer_choice
+  computer_choice = random.choice(options)
+
+  choices = {
+    'player choice': player_choice,
+    'computer choice': computer_choice
+  }
+
+  return choices
 
 
 choices = get_choices()
 
 print(choices)
 
-# KEY PAIRS: key is equivalent to the property (name) of an object (dict), and the value is the value of the key (beau)
-# EXAMPLE:
-# dict = {'name': 'beau', 'color': 'blue'}
+# a list can be made by creating a variable and assigning a list of elements inside a bracket
+# EXAMPLE
+# food = ['pizza', 'carrots', 'eggs']
+# we can use the random method that was imported at the top to randomly assign an element as such:
+# dinner = random.choice(food)
